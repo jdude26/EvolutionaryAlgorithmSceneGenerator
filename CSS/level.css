@@ -1,0 +1,80 @@
+/* CSS Document */
+body{
+	background-color:#141414;
+	font-family: "open sans";
+	color: white;
+}
+#main{
+	width: 1700px;
+}
+h1{
+	line-height: 688px;
+}
+h3{
+	text-indent: 10px;
+}
+#results{
+	position: relative;
+	float: left;
+    width: 1024px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+	color:#555555;
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 65px;
+}
+#seeder{
+	position: absolute;
+	z-index: 10;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+#loading{
+	position: absolute;
+	z-index: 100;
+	border-radius: 8px;
+	top: 0px;
+	left: 0px;
+
+}
+#loading img{
+	height:70px;
+}
+#title{
+	position: relative;
+	width: 1024px;
+	float: left;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+	color:#555555;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#levelBody{
+	position: relative;
+	height: 688px;
+	width: 1024px;
+	border-radius: 8px;
+	background-size: cover;
+	overflow: hidden;
+	float: left;
+	margin-left: 10px;
+
+}
+
+#blueMig{
+	position:absolute;
+	width: 400px;
+	height: 225px;
+	bottom: 0px;
+	left:0px;
+	background-image:url("../Sprites/BlueWalk.png") ;
+}
+.green{
+	color:#109177;
+}
