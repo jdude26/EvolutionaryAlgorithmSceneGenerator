@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="CSS/level.css" type="text/css" />
+<link rel="stylesheet" href="CSS/visualAssets.css" type="text/css" />
+<link rel="stylesheet" href="CSS/form.css" type="text/css" />
+
+<meta charset="UTF-8">
+<title>Scene Generator: Javascript Evolutionary Algorithm</title>
+</head>
+<body>
+
+	<div id="main">
+		<form class="form-style-5">
+				<fieldset>
+					<legend><span class="number">1</span>Choose Scene to Generate</legend>
+
+					<label for="theme">Choose Theme:</label>
+					<select id="theme" name="field4">
+					  <option value="normal">Normal</option>
+					  <option value="funk">Funky</option>
+					  <option value="creepy">Creepy</option>
+					</select>      
+
+					<label for="material">Choose Material:</label>
+					<select id="material" name="field4">
+					  <option value="grass">Grass</option>
+					  <option value="ice">Ice</option>
+					  <option value="snow">Snow</option>
+					  <option value="dirt">Dirt</option>
+					  <option value="mud">Mud</option>
+					  <option value="desert">Desert</option>
+					  <option value="rock">Rock</option>
+					  <option value="desert">Sand</option>
+					</select>
+
+					<label for="setting">Choose Setting:</label>
+					<select id="setting" name="field4">
+					  <option value="forest">Forest</option>
+					  <option value="desert">Desert</option>
+					  <option value="mountain">Mountain</option>
+					  <option value="cave">Cave</option>
+					</select>
+
+					<label for="time">Choose Time of Day:</label>
+					<select id="time" name="field4">
+				  	  <option value="night">Night</option>
+					  <option value="day">Day</option>
+					  <option value="sunrise">Dawn</option>
+					  <option value="sunrise">Dusk</option>
+					  <option value="cave">Cave</option>
+					</select>
+
+				</fieldset>
+				<fieldset>
+					<legend><span class="number">2</span>Adjust Evolutionary Settings</legend>
+					<label for="population">Population Size:</label>
+					<input type="number" name="crossover" id="population" value="500">
+
+					<label for="crossover">Crossover Chance:</label>
+					<input type="number" id="crossover" name="Crossover" min="0" max="1" step =".1" value="0.7">
+
+					<label for="mutation">Mutation Chance:</label>
+					<input type="number" id="mutation" name="Mutation" min="0" max="1" step =".1" value="0.9">
+
+				</fieldset>
+
+				<input type="button" id="run" value="Evolve Scene!" />
+
+			</form>
+		<div id="title"><div id="loading"></div><h2><span class="green">Evolutionary Algorithm:</span> Background Art Generator</h2></div>
+		<div id="levelBody"><div id="seeder"><h1>Ready</h1></div><img width="100%" src="DesignImages/DNA.gif" /></div>
+		<div id="results"></div>
+		
+	</div>
+
+<script src="JavaScript/jquery-3.1.1.js"></script>
+<script src="JavaScript/ArtBuilder/images.js"></script>
+<script src="JavaScript/ArtBuilder/genetic.js"></script>
+<script src="JavaScript/ArtBuilder/builder.js"></script>
+<script>
+	$("#run").click(function() {
+		var solution ={
+			"theme" : "funk",
+			"material" : "grass",
+			"setting" : "forest",
+			"time": "cave"
+		};
+		var population = $("#population").val();
+		var mutation = $("#mutation").val();
+		var crossover = $("#crossover").val();
+		var skip = $("#skip").val();
+
+    	runner(solution, population, mutation, crossover, skip);
+	});
+</script>
+</body>
+</html>
